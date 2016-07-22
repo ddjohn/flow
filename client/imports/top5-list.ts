@@ -8,7 +8,7 @@ import {Mongo} from "meteor/mongo";
 import {MeteorComponent} from 'angular2-meteor';
 import {InjectUser} from 'angular2-meteor-accounts-ui';
 import {PaginationService, PaginatePipe, PaginationControlsCmp} from 'angular2-pagination';
-import {GOOGLE_MAPS_DIRECTIVES, MouseEvent} from 'angular2-google-maps/core';
+//import {GOOGLE_MAPS_DIRECTIVES, MouseEvent} from 'angular2-google-maps/core';
 
 /* Stuff */
 import {Top5} from "/collections/top5.ts"; 
@@ -48,7 +48,7 @@ import {Top5Form} from "./top5-form.ts";
     </table>
     <pagination-controls (change)="onPageChanged($event.page)"></pagination-controls>
 
-<sebm-google-map
+<!-- sebm-google-map
         [latitude]="lat || centerLat"
         [longitude]="lng || centerLng"
         [zoom]="8"
@@ -58,9 +58,10 @@ import {Top5Form} from "./top5-form.ts";
           [latitude]="lat"
           [longitude]="lng">
   </sebm-google-map-marker>
-</sebm-google-map>
+</sebm-google-map -->
   `,
-  directives: [Top5Form, ROUTER_DIRECTIVES, GOOGLE_MAPS_DIRECTIVES, PaginationControlsCmp],
+  //directives: [Top5Form, ROUTER_DIRECTIVES, GOOGLE_MAPS_DIRECTIVES, PaginationControlsCmp],
+  directives: [Top5Form, ROUTER_DIRECTIVES, PaginationControlsCmp],
   pipes: [PaginatePipe],
 })
 
